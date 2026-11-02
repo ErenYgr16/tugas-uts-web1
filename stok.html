@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog - Toko Buku Kehidupan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="halamanStok">
+  <header>
+    <span class="brand">Toko Buku Kehidupan</span>
+    <nav>
+      <a href="dashboard.html" >Dashboard</a>
+      <a href="stok.html" class="aktif">Katalog</a>
+      <a href="checkout.html" >Pemesanan</a>
+      <a href="tracking.html" >Tracking</a>
+      <a href="#" onclick="logout()">Keluar</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Informasi Stok Buku</h1>
+
+    <section class="card tabel-wrap">
+      <table>
+        <thead>
+          <tr><th>Cover</th><th>Kode</th><th>Judul</th><th>Jenis</th><th>Edisi</th><th>Stok</th><th>Harga</th><th>Aksi</th></tr>
+        </thead>
+        <tbody id="isiStok"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Tambah Stok Baru</h2>
+      <form id="formStok">
+        <div class="baris">
+          <div><label for="kode">Kode barang</label><input type="text" id="kode"></div>
+          <div><label for="nama">Nama barang</label><input type="text" id="nama"></div>
+          <div><label for="jenis">Jenis</label><input type="text" id="jenis" value="Buku Ajar"></div>
+        </div>
+        <div class="baris">
+          <div><label for="edisi">Edisi</label><input type="text" id="edisi"></div>
+          <div><label for="stok">Stok</label><input type="number" id="stok" min="0"></div>
+          <div><label for="harga">Harga (angka)</label><input type="number" id="harga" min="0" placeholder="150000"></div>
+        </div>
+        <p class="error" id="errStok"></p>
+        <button type="submit" class="btn">Tambah</button>
+      </form>
+    </section>
+  </main>
+  <footer>&copy; 2025 Toko Buku Kehidupan - Tugas UTS Pemrograman Web</footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

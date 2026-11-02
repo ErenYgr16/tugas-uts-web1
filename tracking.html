@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking - Toko Buku Kehidupan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="halamanTracking">
+  <header>
+    <span class="brand">Toko Buku Kehidupan</span>
+    <nav>
+      <a href="dashboard.html" >Dashboard</a>
+      <a href="stok.html" >Katalog</a>
+      <a href="checkout.html" >Pemesanan</a>
+      <a href="tracking.html" class="aktif">Tracking</a>
+      <a href="#" onclick="logout()">Keluar</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Tracking Pengiriman</h1>
+
+    <section class="card">
+      <form id="formCari" class="cari">
+        <input type="text" id="nomorDO" placeholder="Masukkan Nomor Delivery Order (contoh: 20230012)">
+        <button type="submit" class="btn">Cari</button>
+      </form>
+    </section>
+
+    <section id="hasil"></section>
+  </main>
+  <footer>&copy; 2025 Toko Buku Kehidupan - Tugas UTS Pemrograman Web</footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

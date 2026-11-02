@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemesanan - Toko Buku Kehidupan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="halamanCheckout">
+  <header>
+    <span class="brand">Toko Buku Kehidupan</span>
+    <nav>
+      <a href="dashboard.html" >Dashboard</a>
+      <a href="stok.html" >Katalog</a>
+      <a href="checkout.html" class="aktif">Pemesanan</a>
+      <a href="tracking.html" >Tracking</a>
+      <a href="#" onclick="logout()">Keluar</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Pemesanan Buku</h1>
+
+    <section class="card">
+      <h2>Daftar Pesanan</h2>
+      <div class="baris">
+        <div>
+          <label for="pilihBuku">Tambah buku</label>
+          <select id="pilihBuku"><option value="">-- pilih buku --</option></select>
+        </div>
+        <div style="flex:0"><button type="button" class="btn btn-aksen" id="btnTambah">Tambah</button></div>
+      </div>
+      <div class="tabel-wrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>Buku</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th><th>Aksi</th></tr></thead>
+          <tbody id="isiKeranjang"></tbody>
+        </table>
+      </div>
+      <p class="total" id="totalBayar"></p>
+    </section>
+
+    <section class="card">
+      <h2>Data Pemesan dan Pembayaran</h2>
+      <form id="formCheckout">
+        <label for="namaPemesan">Nama pemesan</label>
+        <input type="text" id="namaPemesan">
+        <label for="hp">Nomor HP</label>
+        <input type="tel" id="hp" placeholder="08123456789">
+        <label for="alamat">Alamat pengiriman</label>
+        <textarea id="alamat" rows="3"></textarea>
+        <label for="metode">Metode pembayaran</label>
+        <select id="metode">
+          <option value="">-- pilih --</option>
+          <option>Transfer Bank</option>
+          <option>Kartu Kredit</option>
+          <option>E-Wallet</option>
+        </select>
+        <p class="error" id="errCheckout"></p>
+        <button type="submit" class="btn">Buat Pesanan</button>
+      </form>
+    </section>
+  </main>
+  <footer>&copy; 2025 Toko Buku Kehidupan - Tugas UTS Pemrograman Web</footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

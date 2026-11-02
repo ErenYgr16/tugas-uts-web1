@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Toko Buku Kehidupan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="halamanLogin" class="halaman-login">
+  <main class="kotak-login">
+    <h1>Toko Buku Kehidupan</h1>
+    <p class="sub">Silakan login untuk memesan buku.</p>
+
+    <form id="formLogin">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="nama@gmail.com">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <div class="link-bawah">
+      <button class="btn-link" onclick="bukaModal('modalLupa')">Lupa Password</button>
+      <button class="btn-link" onclick="bukaModal('modalDaftar')">Daftar</button>
+    </div>
+  </main>
+
+  <!-- Modal lupa password -->
+  <div class="modal" id="modalLupa">
+    <div class="modal-isi">
+      <button class="tutup" onclick="tutupModal('modalLupa')">&times;</button>
+      <h2>Lupa Password</h2>
+      <form id="formLupa">
+        <label for="emailLupa">Email terdaftar</label>
+        <input type="email" id="emailLupa" required>
+        <button type="submit" class="btn">Kirim Link Reset</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal daftar -->
+  <div class="modal" id="modalDaftar">
+    <div class="modal-isi">
+      <button class="tutup" onclick="tutupModal('modalDaftar')">&times;</button>
+      <h2>Daftar Akun</h2>
+      <form id="formDaftar">
+        <label for="daftarNama">Nama lengkap</label>
+        <input type="text" id="daftarNama">
+        <label for="daftarEmail">Email</label>
+        <input type="email" id="daftarEmail">
+        <label for="daftarPass">Password</label>
+        <input type="password" id="daftarPass">
+        <p class="error" id="errDaftar"></p>
+        <button type="submit" class="btn">Daftar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

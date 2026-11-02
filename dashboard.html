@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Toko Buku Kehidupan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="halamanDashboard">
+  <header>
+    <span class="brand">Toko Buku Kehidupan</span>
+    <nav>
+      <a href="dashboard.html" class="aktif">Dashboard</a>
+      <a href="stok.html" >Katalog</a>
+      <a href="checkout.html" >Pemesanan</a>
+      <a href="tracking.html" >Tracking</a>
+      <a href="#" onclick="logout()">Keluar</a>
+    </nav>
+  </header>
+  <main>
+    <section class="greeting">
+      <h1 id="greeting"></h1>
+      <p id="peran"></p>
+    </section>
+
+    <section class="menu">
+      <a href="stok.html">Informasi Stok / Katalog<span>Lihat dan kelola daftar buku</span></a>
+      <a href="tracking.html">Tracking Pengiriman<span>Cek status paket dengan nomor DO</span></a>
+      <a href="checkout.html">Laporan Pemesanan<span>Keranjang dan data pemesan</span></a>
+      <button type="button" onclick="bukaModal('modalHistory')">History Transaksi<span>Daftar transaksi sebelumnya</span></button>
+    </section>
+
+    <div class="modal" id="modalHistory">
+      <div class="modal-isi" style="max-width:600px">
+        <button class="tutup" onclick="tutupModal('modalHistory')">&times;</button>
+        <h2>History Transaksi</h2>
+        <div class="tabel-wrap">
+          <table>
+            <thead><tr><th>No. DO</th><th>Nama</th><th>Tanggal</th><th>Total</th></tr></thead>
+            <tbody id="isiHistory"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>&copy; 2025 Toko Buku Kehidupan - Tugas UTS Pemrograman Web</footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
