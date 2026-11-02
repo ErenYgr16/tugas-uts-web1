@@ -59,6 +59,5 @@ Aplikasi web sederhana untuk pemesanan buku pada toko online. Fokus pada **front
    - `siti@gmail.com` / `siti123` (Admin)
 4. Nomor DO untuk uji tracking: `20230012` dan `20230013`.
 
-## Catatan
-- Data yang ditambahkan (stok baru, pengguna baru) hanya tersimpan di memori dan hilang saat halaman di-refresh, karena tidak memakai database.
-- Keranjang dan sesi login tersimpan di `sessionStorage` dan hilang saat tab ditutup.
+## Link Youtube
+https://youtu.be/Zx0xd63aWgA?si=pVhnaBX-sBGfvqgk
